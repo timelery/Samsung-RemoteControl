@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CF671B4-1FC7-4D36-A78C-95FC34DDF878}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartTVRemoteControl</RootNamespace>
+    <AssemblyName>SmartTVRemoteControl</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\SamsungRemote\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E2C9C72191556A91E5263616DB88F5C57F3614AA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SmartTVRemoteControl_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine, Version=1.9.71.2, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Drivers\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaLibrary">
+      <HintPath>..\Drivers\MediaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>..\Drivers\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="multiscreen-windows-api-csharp">
+      <HintPath>..\Drivers\multiscreen-windows-api-csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Networking">
+      <HintPath>..\Drivers\Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="Networking.Native">
+      <HintPath>..\Drivers\Networking.Native.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Drivers\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Concurrent, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Concurrent.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Enlightenment, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SmartView2.Core">
+      <HintPath>..\Drivers\SmartView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartView2.Devices">
+      <HintPath>..\Drivers\SmartView2.Devices.dll</HintPath>
+    </Reference>
+    <Reference Include="SPCApi">
+      <HintPath>..\Drivers\SPCApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp">
+      <HintPath>..\Drivers\taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UIFoundation">
+      <HintPath>..\Drivers\UIFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="UPnP">
+      <HintPath>..\Drivers\UPnP.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net">
+      <HintPath>..\Drivers\WebSocket4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Enums\SettingsType.cs" />
+    <Compile Include="Common\IBaseController.cs" />
+    <Compile Include="Common\IDispatcher.cs" />
+    <Compile Include="DeviceController.cs" />
+    <Compile Include="DeviceFactory.cs" />
+    <Compile Include="DeviceSettingProvider.cs" />
+    <Compile Include="Log4NetLogger.cs" />
+    <Compile Include="MediaLibrary\DataLibrary.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Settings\SettingsModel.cs" />
+    <Compile Include="Native\dlna\DLNAFlags.cs" />
+    <Compile Include="Native\dlna\DLNAMaps.cs" />
+    <Compile Include="Native\dlna\DLNAMime.cs" />
+    <Compile Include="Native\dlna\DlnaServer.cs" />
+    <Compile Include="Native\dlna\Handler\ContentDirectoryHandler.cs" />
+    <Compile Include="Native\dlna\Handler\ControlHandler.cs" />
+    <Compile Include="Native\dlna\Handler\DescriptionHandler.cs" />
+    <Compile Include="Native\dlna\Handler\FileHandler.cs" />
+    <Compile Include="Native\dlna\SSDP\Datagram.cs" />
+    <Compile Include="Native\dlna\SSDP\SsdpServer.cs" />
+    <Compile Include="Native\dlna\UPnP\UPnPDevice.cs" />
+    <Compile Include="Native\EDataFlow.cs" />
+    <Compile Include="Native\ERole.cs" />
+    <Compile Include="Native\HTTP\Headers.cs" />
+    <Compile Include="Native\HTTP\HttpCode.cs" />
+    <Compile Include="Native\HTTP\HttpPhrases.cs" />
+    <Compile Include="Native\HTTP\HttpRequest.cs" />
+    <Compile Include="Native\HTTP\HttpResponse.cs" />
+    <Compile Include="Native\HTTP\HttpServer.cs" />
+    <Compile Include="Native\HTTP\IHttpHandler.cs" />
+    <Compile Include="Native\IAudioSessionControl2.cs" />
+    <Compile Include="Native\IAudioSessionEnumerator.cs" />
+    <Compile Include="Native\IAudioSessionManager2.cs" />
+    <Compile Include="Native\IMMDevice.cs" />
+    <Compile Include="Native\IMMDeviceEnumerator.cs" />
+    <Compile Include="Native\ISimpleAudioVolume.cs" />
+    <Compile Include="Native\MediaLibrary\DataLibrary.cs" />
+    <Compile Include="Native\MMDeviceEnumerator.cs" />
+    <Compile Include="Native\MultiScreen\ChannelListner.cs" />
+    <Compile Include="Native\MultiScreen\DeviceResult_T_.cs" />
+    <Compile Include="Native\MultiScreen\MediaContent.cs" />
+    <Compile Include="Native\MultiScreen\MediaPanel.cs" />
+    <Compile Include="Native\MultiScreen\MediaQueueItem.cs" />
+    <Compile Include="Native\MultiScreen\MediaQueuePlayer.cs" />
+    <Compile Include="Native\MultiScreen\MediaTimeInfo.cs" />
+    <Compile Include="Native\MultiScreen\MediaUser.cs" />
+    <Compile Include="Native\MultiScreen\MultiScreenController.cs" />
+    <Compile Include="Native\MultiScreen\MultiScreenResult_T_.cs" />
+    <Compile Include="Native\MultiScreen\QueueConfig.cs" />
+    <Compile Include="Native\MultiScreen\StateObject.cs" />
+    <Compile Include="Native\Player\PlayerNotificationProvider.cs" />
+    <Compile Include="Native\SpcApiWrapper.cs" />
+    <Compile Include="Native\Wlan\WlanApiWrapper.cs" />
+    <Compile Include="Native\Wlan\WlanConnectionInfo.cs" />
+    <Compile Include="Native\Wlan\WlanConnectionMode.cs" />
+    <Compile Include="Native\Wlan\WlanInterfaceInfo.cs" />
+    <Compile Include="Native\Wlan\WlanInterfaceState.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="Pin.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadSafeCollection_T_.cs" />
+    <Compile Include="TvDiscovery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SmartTVRemoteControl_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Native\dlna\resources\error.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
